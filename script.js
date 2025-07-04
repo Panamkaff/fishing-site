@@ -9,7 +9,7 @@
             };
 
             // Отправляем данные на сервер
-            const response = await fetch('http://summerserver.onrender.com', {
+            const response = await fetch('https://summerserver.onrender.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)

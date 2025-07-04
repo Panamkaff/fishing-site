@@ -38,3 +38,16 @@ p {
     color:rgb(62, 87, 160);
     font-family: cursive;
 }
+
+a {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: rgb(56, 79, 146);
+    background-color: rgb(162, 229, 255);
+    border: 3px solid royalblue;
+    padding: 30px;
+    margin: 45px;
+    border-radius: 10px;
+    text-decoration: none;
+}

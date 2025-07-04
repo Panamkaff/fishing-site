@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Morse</title>
+</head>
+
+<body>
+    <input type="text">
+    <button onclick="encrypt()">Зашифровать</button>
+    <p class="result"></p>
+
+    <script>
+        function encrypt() {
+            let InputText = document.querySelector('input').value;
+            const morseCode = {
+                'А': '.-', 'Б': '-...', 'В': '.--', 'Г': '--.', 'Д': '-..', 'Е': '.', 'Ё': '.-..-', 'Ж': '...-',
+                'З': '--..', 'И': '..', 'Й': '.---', 'К': '-.-', 'Л': '.-..', 'М': '--', 'Н': '-.', 'О': '---',
+                'П': '.--.', 'Р': '.-.', 'С': '...', 'Т': '-', 'У': '..-', 'Ф': '..-.', 'Х': '....-', 'Ц': '-.-..',
+                'Ч': '---.', 'Ш': '----', 'Щ': '--.-', 'Ъ': '.--.-', 'Ы': '-.--', 'Ь': '-..-', 'Э': '..-..', 'Ю': '..--',
+                'Я': '.-.-'
+            };
+            let result = '';
+            for (let char of InputText){
+                if(morseCode[char.toUpperCase()]){
+                    result += morseCode[char.toUpperCase()] + ' ';
+                }
+                else if(char == ' '){
+                    result += '/ ';
+                }
+                else{
+                    result =+ char;
+                }
+            }
+            document.querySelector('.result').textContent = result; 
+        }
+    </script>
+</body>
+
+</html>
